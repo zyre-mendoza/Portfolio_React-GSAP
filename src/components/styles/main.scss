@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'sk-modernist'; /* Name of the font */
+    src: url('./assets/fonts/Sk-Modernist-Regular.otf') format('opentype'); /* Path to the font */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+  @font-face {
+    font-family: 'YourCustomFont'; /* Name of the font */
+    src: url('./assets/fonts/Sk-Modernist-Bold.otf') format('opentype'); /* Path to the font */
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+  *{
+    padding: 0;
+    margin: 0;
+  }
+
+ /* Apply the regular font */
+body {
+    font-family: 'sk-modernist', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Apply the bold font */
+  h1, h2, h3 {
+    font-family: 'sk-modernist', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Apply the italic font */
+  em, i {
+    font-family: 'sk-modernist', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+
+  /* Hero.scss */
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #111;
+    overflow: hidden;
+  }
+  
+  .text-container {
+    position: absolute;
+    bottom: 0; /* Place the container in the middle */
+    /* Center it horizontally and vertically */
+    width: 100%;
+    height: 43vh; /* Keep height relative to viewport */
+    text-align: center; /* Center-align the text */
+  
+    .scroll-text {
+      font-size: 43vh; /* Large background text */
+      line-height: 90%;
+      font-weight: bold;
+      color: #999;
+      white-space: nowrap;
+      z-index: 1; /* Make sure the background text is behind the marquee */
+      position: relative;
+    }
+  }
+  
+  .hero-section2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .hero-section2 h2 {
+    color: #999;
+    font-size: 3rem;
+  }
+
+
+  .texts{
+    position: relative;
+    height: 100%;
+  }
+
+  .marquee {
+    position: absolute;
+    top: 50%; /* Align it vertically in the middle */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+
+    white-space: nowrap;
+    background-color: #111; /* Ensure background is transparent */
+    z-index: 10; /* Keep the marquee above the scroll text */
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    font-size: 40px; /* Adjust font size for the marquee */
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite; /* Marquee scroll effect */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
